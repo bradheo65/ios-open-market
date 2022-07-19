@@ -32,6 +32,7 @@ class JSONParser {
             
             if let data = data {
                 do {
+                    // let decodeData = try JSONDecoder().decode(ProductListResponse.self, from: data)
                     let decodeData = try JSONDecoder().decode(ProductListResponse.self, from: data)
                     completion(.success(decodeData))
                 }
@@ -41,6 +42,7 @@ class JSONParser {
             }
         }
         task.resume()
+        FirstViewController().productCollectionView?.reloadData()
     }
 }
 
