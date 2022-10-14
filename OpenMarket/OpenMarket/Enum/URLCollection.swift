@@ -8,7 +8,7 @@
 import Foundation
 
 enum URLCollection {
-    static let hostURL = "https://market-training.yagom-academy.kr/"
+    static let hostURL = "https://openmarket.yagom-academy.kr"
     case healthChecker
     case productList(pageNumber: Int, itemsPerPage: Int)
     case productDetail(productNumber: Int)
@@ -32,8 +32,8 @@ enum URLCollection {
 }
 
 enum VendorInfo {
-    static let identifier = "fa69efb9-0335-11ed-9676-1db1453669a0"
-    static let secret = "aJo1WTMl7u"
+    static let identifier = "f67d572f-4aa2-11ed-a200-8ba6a006f5ab"
+    static let secret = "z1xc3q4v12b3b1ja3ou"
 }
 
 enum HTTPMethod {

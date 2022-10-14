@@ -86,7 +86,7 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCollectionViewCell.reuseIdentifier, for: indexPath) as! ListCollectionViewCell
         
         cell.accessories = [.disclosureIndicator()]
-        cell.fetchData(data: productData, index: indexPath.row)
+        cell.fetchData(data: productData, index: ((productData?.totalCount ?? 0) - 1))
         
         return cell
     }

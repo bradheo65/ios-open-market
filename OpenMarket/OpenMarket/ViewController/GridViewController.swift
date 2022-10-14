@@ -57,7 +57,7 @@ final class GridViewController: UIViewController {
                 print(data)
             }
         })
-        URLSemaphore.wait()
+        self.URLSemaphore.wait()
     }
 }
 
@@ -72,7 +72,7 @@ extension GridViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GridCollectionViewCell.reuseIdentifier, for: indexPath) as! GridCollectionViewCell
-        cell.fetchData(data: productData, index: indexPath.row)
+        cell.fetchData(data: productData, index: ((productData?.totalCount ?? 0) - 1))
         
         return cell
     }
